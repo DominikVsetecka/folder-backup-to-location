@@ -1,0 +1,62 @@
+{
+  "name": "folder-backup-to-location",
+  "publisher": "DominikVsetecka",
+  "displayName": "Folder Backup To Location",
+  "description": "Backup a selected folder into a configurable destination directory with a timestamped copy.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DominikVsetecka/folder-backup-to-location.git"
+  },
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.backupFolderToLocation"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.backupFolderToLocation",
+          "when": "explorerResourceIsFolder",
+          "group": "navigation"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "extension.backupFolderToLocation",
+        "title": "Backup folder to location"
+      }
+    ],
+    "configuration": {
+      "title": "Folder Backup To Location",
+      "properties": {
+        "folderBackupToLocation.backupTargetFolder": {
+          "type": "string",
+          "default": "",
+          "description": "Absolute path to the folder where backups are stored. Use a plain path without quotes. Leave empty to choose a folder each time."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.105.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.36.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
