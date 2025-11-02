@@ -6,4 +6,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+## [0.0.2] - 2024-11-02
+- Point users to the Marketplace listing and keep manual VSIX steps optional.
+
+## [0.0.1] - 2024-11-02
+- Initial release.
