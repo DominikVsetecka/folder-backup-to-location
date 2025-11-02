@@ -9,8 +9,8 @@ A VS Code extension to back up selected folders to a configurable destination di
 
 ## Installation
 
-1. Package the extension: `npx @vscode/vsce package`
-2. Install the generated .vsix file in VS Code.
+- Install directly from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=DominikVsetecka.folder-backup-to-location).
+- Optional manual install: package with `npx @vscode/vsce package` and use "Install from VSIX…" in VS Code.
 
 ## Usage
 
