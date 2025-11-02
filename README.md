@@ -19,6 +19,11 @@ A VS Code extension to back up selected folders to a configurable destination di
 3. Select "Backup folder to location".
 4. The extension copies the folder into the configured destination (or asks you to choose one) with a timestamp appended.
 
+## Settings
+
+- `Folder Backup To Location › Backup Target Folder`: Optional default destination for backups. Use a plain absolute path without quotes.
+- `Folder Backup To Location › Exclude Node Modules`: When enabled, skips every `node_modules` directory during the copy.
+
 ## Requirements
 
 - VS Code 1.105.0 or higher.
