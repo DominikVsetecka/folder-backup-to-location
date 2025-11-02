@@ -6,6 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.3] - 2025-01-01
+- Update MIT license year to 2025.
+
 ## [0.0.2] - 2024-11-02
 - Point users to the Marketplace listing and keep manual VSIX steps optional.
 
