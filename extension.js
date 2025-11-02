@@ -13,6 +13,7 @@ function activate(context) {
 
     const config = vscode.workspace.getConfiguration('folderBackupToLocation');
     let backupRoot = config.get('backupTargetFolder', '').trim();
+    const excludeNodeModules = config.get('excludeNodeModules', false);
 
     if (!backupRoot) {
       const openResult = await vscode.window.showOpenDialog({
@@ -37,8 +38,26 @@ function activate(context) {
 
     try {
       fs.mkdirSync(backupRoot, { recursive: true });
-      fs.cpSync(srcFolder, backupFolder, { recursive: true });
-      vscode.window.showInformationMessage(`Backup created: ${backupFolder}`);
+      fs.cpSync(srcFolder, backupFolder, {
+        recursive: true,
+        filter: (source) => {
+          if (!excludeNodeModules) {
+            return true;
+          }
+
+          const relativePath = path.relative(srcFolder, source);
+
+          if (!relativePath) {
+            return true;
+          }
+
+          const segments = relativePath.split(path.sep);
+          return !segments.includes('node_modules');
+        }
+      });
+
+      const messageSuffix = excludeNodeModules ? ' (node_modules excluded)' : '';
+      vscode.window.showInformationMessage(`Backup created: ${backupFolder}${messageSuffix}`);
     } catch (err) {
       vscode.window.showErrorMessage(`Backup failed: ${err.message}`);
     }

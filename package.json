@@ -3,7 +3,7 @@
   "publisher": "DominikVsetecka",
   "displayName": "Folder Backup To Location",
   "description": "Backup a selected folder into a configurable destination directory with a timestamped copy.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -42,6 +42,11 @@
           "type": "string",
           "default": "",
           "description": "Absolute path to the folder where backups are stored. Use a plain path without quotes. Leave empty to choose a folder each time."
+        },
+        "folderBackupToLocation.excludeNodeModules": {
+          "type": "boolean",
+          "default": false,
+          "description": "Exclude any node_modules folders from the backup."
         }
       }
     }
