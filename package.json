@@ -3,7 +3,7 @@
   "publisher": "DominikVsetecka",
   "displayName": "Folder Backup To Location",
   "description": "Backup a selected folder into a configurable destination directory with a timestamped copy.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "repository": {
     "type": "git",

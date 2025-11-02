@@ -6,6 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.5] - 2025-01-01
+- Exclude `node_modules` from VSIX packaging to reduce bundle size.
+
 ## [0.0.4] - 2025-01-01
 - Added optional setting to exclude `node_modules` directories during backup.
 
