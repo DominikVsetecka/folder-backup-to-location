@@ -4,5 +4,7 @@ node_modules/
 coverage/
 out/
 .vscode-test/
+.vscode/settings.json
+.vscode/*.code-workspace
 .idea/
 *.log
