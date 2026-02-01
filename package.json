@@ -15,9 +15,6 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:extension.backupFolderToLocation"
-  ],
   "main": "./extension.js",
   "contributes": {
     "menus": {
